@@ -15,7 +15,7 @@ after_success:
   - docker build -t wilcokuyper/multi-nginx ./nginx
 # login to docker
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push -t wilcokuyper/multi-client
-  - docker push -t wilcokuyper/multi-server
-  - docker push -t wilcokuyper/multi-worker
-  - docker push -t wilcokuyper/multi-nginx
+  - docker push wilcokuyper/multi-client
+  - docker push wilcokuyper/multi-server
+  - docker push wilcokuyper/multi-worker
+  - docker push wilcokuyper/multi-nginx
